@@ -48,6 +48,25 @@ func getMultipleString() {
 	fmt.Println(l)
 }
 
+func getMultipleInt() {
+	// 1行でスペース区切りの数値を取得
+	// 例
+	// ==========
+	// 123 234 345
+	// ==========
+	// スペースで区切った数値を配列lに格納する
+
+	sc := bufio.NewScanner(os.Stdin)
+	sc.Scan()
+
+	l := []int{}
+	for _, s := range strings.Split(sc.Text(), " ") {
+		a, _ := strconv.Atoi(s)
+		l = append(l, a)
+	}
+	fmt.Println(l)
+}
+
 func getMultipleRowsString() {
 	// 行数NとN行の文字列
 	// 例
@@ -74,6 +93,7 @@ func getMultipleRowsString() {
 func main() {
 	// getSingleString()
 	// getSingleInt()
-	getMultipleString()
+	// getMultipleString()
+	getMultipleInt()
 	// getMultipleRowsString()
 }
