@@ -22,10 +22,10 @@ func getSingleString() {
 }
 
 func getSingleInt() {
-	// 文字列１つのみ
+	// 数値１つのみ
 	// 例
 	// ==========
-	// sample
+	// 123
 	// ==========
 	sc := bufio.NewScanner(os.Stdin)
 	sc.Scan()
