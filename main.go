@@ -138,6 +138,34 @@ func getMultipleRowsAndMultipleString() {
 	fmt.Println(m)
 }
 
+func getMultipleRowsAndMultipleInt() {
+	// 行数NとN行の数値（スペース区切りで複数個）
+	// 例
+	// ==========
+	// 3
+	// 11 12 13
+	// 21 22 23
+	// 31 32 33
+	// ==========
+	// N行の内容をスペースで区切り、スライスmに格納する
+	sc := bufio.NewScanner(os.Stdin)
+	sc.Scan()
+	n, _ := strconv.Atoi(sc.Text())
+
+	m := []int{}
+	for i := 0; i < n; i++ {
+		sc.Scan()
+		t := []int{}
+		for _, v := range strings.Split(sc.Text(), " ") {
+			i, _ := strconv.Atoi(v)
+			t = append(t, i)
+		}
+		m = append(m, t...)
+	}
+	fmt.Println(n)
+	fmt.Println(m)
+}
+
 func main() {
 	// getSingleString()
 	// getSingleInt()
@@ -145,5 +173,6 @@ func main() {
 	// getMultipleInt()
 	// getMultipleRowsString()
 	// getMultipleRowsInt()
-	getMultipleRowsAndMultipleString()
+	// getMultipleRowsAndMultipleString()
+	getMultipleRowsAndMultipleInt()
 }
