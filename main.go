@@ -165,6 +165,7 @@ func getMultipleRowsAndMultipleInt() {
 }
 
 func main() {
+	fmt.Println("Start")
 	// getSingleString()
 	// getSingleInt()
 	// getMultipleString()
@@ -172,5 +173,6 @@ func main() {
 	// getMultipleRowsString()
 	// getMultipleRowsInt()
 	// getMultipleRowsAndMultipleString()
-	getMultipleRowsAndMultipleInt()
+	// getMultipleRowsAndMultipleInt()
+	fmt.Println("End")
 }
