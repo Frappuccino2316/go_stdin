@@ -90,10 +90,60 @@ func getMultipleRowsString() {
 	fmt.Println(m)
 }
 
+func getMultipleRowsInt() {
+	// 行数NとN行の数値
+	// 例
+	// ==========
+	// 3
+	// 123
+	// 234
+	// 345
+	// ==========
+	// N個の数値はスライスmに格納する
+	sc := bufio.NewScanner(os.Stdin)
+	sc.Scan()
+	n, _ := strconv.Atoi(sc.Text())
+
+	m := []int{}
+	for i := 0; i < n; i++ {
+		sc.Scan()
+		a, _ := strconv.Atoi(sc.Text())
+		m = append(m, a)
+	}
+	fmt.Println(n)
+	fmt.Println(m)
+}
+
+func getMultipleRowsAndMultipleString() {
+	// 行数NとN行の文字列（スペース区切りで複数個）
+	// 例
+	// ==========
+	// 3
+	// sample1-1 sample1-2 sample1-3
+	// sample2-1 sample2-2 sample2-3
+	// sample3-1 sample3-2 sample3-3
+	// ==========
+	// N行の文字列をスペースで区切り、スライスmに格納する
+	sc := bufio.NewScanner(os.Stdin)
+	sc.Scan()
+	n, _ := strconv.Atoi(sc.Text())
+
+	m := []string{}
+	for i := 0; i < n; i++ {
+		sc.Scan()
+		t := strings.Split(sc.Text(), " ")
+		m = append(m, t...)
+	}
+	fmt.Println(n)
+	fmt.Println(m)
+}
+
 func main() {
 	// getSingleString()
 	// getSingleInt()
 	// getMultipleString()
-	getMultipleInt()
+	// getMultipleInt()
 	// getMultipleRowsString()
+	// getMultipleRowsInt()
+	getMultipleRowsAndMultipleString()
 }
