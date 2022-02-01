@@ -34,7 +34,7 @@ func getSingleInt() {
 	fmt.Println(i)
 }
 
-func getMultiplestring() {
+func getMultipleString() {
 	// 1行でスペース区切りの文字列を取得
 	// 例
 	// ==========
@@ -74,6 +74,6 @@ func getMultipleRowsString() {
 func main() {
 	// getSingleString()
 	// getSingleInt()
-	getMultiplestring()
+	getMultipleString()
 	// getMultipleRowsString()
 }
