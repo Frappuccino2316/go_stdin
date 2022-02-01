@@ -8,8 +8,6 @@ import (
 	"strings"
 )
 
-// import "strings"
-
 func getSingleString() {
 	// 文字列１つのみ
 	// 例
