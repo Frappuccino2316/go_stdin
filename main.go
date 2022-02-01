@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"strings"
 )
 
 // import "strings"
@@ -33,6 +34,20 @@ func getSingleInt() {
 	fmt.Println(i)
 }
 
+func getMultiplestring() {
+	// 1行でスペース区切りの文字列を取得
+	// 例
+	// ==========
+	// sample sample1 sample2
+	// ==========
+	// スペースで区切った文字列を配列lに格納する
+
+	sc := bufio.NewScanner(os.Stdin)
+	sc.Scan()
+	l := strings.Split(sc.Text(), " ")
+	fmt.Println(l)
+}
+
 func getMultipleRowsString() {
 	// 行数NとN行の文字列
 	// 例
@@ -59,5 +74,6 @@ func getMultipleRowsString() {
 func main() {
 	// getSingleString()
 	// getSingleInt()
+	getMultiplestring()
 	// getMultipleRowsString()
 }
