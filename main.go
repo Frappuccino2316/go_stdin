@@ -33,7 +33,7 @@ func getSingleInt() {
 	fmt.Println(i)
 }
 
-func getMultipleString() {
+func getMultipleRowsString() {
 	// 行数NとN行の文字列
 	// 例
 	// ==========
@@ -59,5 +59,5 @@ func getMultipleString() {
 func main() {
 	// getSingleString()
 	// getSingleInt()
-	getMultipleString()
+	// getMultipleRowsString()
 }
